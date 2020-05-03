@@ -67,7 +67,7 @@ class board:
 
     def mov(self, dir):
         self.rect_update()
-        if dir==True and self.x<700:
+        if dir==True and self.x<687:
             self.x+=2
         if dir==False and self.x>0:
             self.x-=2
