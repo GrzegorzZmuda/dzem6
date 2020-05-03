@@ -8,7 +8,7 @@ class box:
     def __init__(self,x,y):
         self.x = x
         self.y = y
-        self.srf = pygame.image.load("3.bmp")
+        self.srf = pygame.image.load("5.bmp")
         self.rect = self.srf.get_rect(topleft=(self.x,self.y))
 
 
@@ -58,7 +58,7 @@ class board:
     def __init__(self):
         self.x=375
         self.y=750
-        self.srf=pygame.image.load("1.bmp")
+        self.srf=pygame.image.load("7.bmp")
         self.rect = self.srf.get_rect()
 
     def rect_update(self):
@@ -67,7 +67,7 @@ class board:
 
     def mov(self, dir):
         self.rect_update()
-        if dir==True and self.x<775:
+        if dir==True and self.x<700:
             self.x+=2
         if dir==False and self.x>0:
             self.x-=2
@@ -77,9 +77,9 @@ class board:
 map=[]
 for i in range(10):
 
-    for j in range(40):
+    for j in range(20):
         if 1==random.randrange(0,5):
-            map.append(box(j*20,i*10))
+            map.append(box(j*40,i*20))
 
 pygame.init()
 surf1=np.full((800,800,3),(230,239,230))
